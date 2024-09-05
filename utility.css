@@ -1,0 +1,86 @@
+.border {
+    border: 2px solid black;
+    margin: 3px;
+}
+.flex {
+    display: flex;
+}
+.justify-center {
+    justify-content: center;
+}
+.align-center {
+    align-items: center;
+}
+.bg-black {
+    background-color: black;
+    color: white;
+}
+.invert {
+    filter: invert(1);
+}
+.bg-grey {
+    background-color: #121212;
+}
+.rounded {
+    border-radius: 7px;
+}
+.m-1 {
+    margin: 5px;
+}
+.p-1 {
+    padding: 20px;
+}
+.list {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+.grey {
+  color: rgb(179, 179, 179);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #333; 
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #222; 
+  }
+  
+  scrollbar-color: #333 #222; 
+  
+  .slider {
+    -webkit-appearance: none; /* Override default styles */
+    appearance: none; /* Override default styles */
+    width: 100%; /* Set the width of the slider */
+    height: 10px; /* Set the height of the slider */
+    background: #ddd; /* Background color of the track */
+    border-radius: 5px; /* Rounded corners for the track */
+    outline: none; /* Remove outline */
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default styles */
+    appearance: none; /* Override default styles */
+    width: 3px; /* Set the width of the thumb */
+    height: 3px; /* Set the height of the thumb */
+    background: #4CAF50; /* Thumb color */
+    border-radius: 50%; /* Round thumb */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 3px; /* Set the width of the thumb */
+    height: 3px; /* Set the height of the thumb */
+    background: #4CAF50; /* Thumb color */
+    border-radius: 50%; /* Round thumb */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
