@@ -1,4 +1,7 @@
 {
     "title": "Go Funky",
-    "description": "Lets go Funky"
+    "description": "Lets go Funky",
+    "songList": ["Diversion en la Distancia - Jovenes Viejos.mp3", 
+    "Mas Basico Cabron - Jovenes Viejos.mp3",
+"Meneate las Pompis - Jovenes Viejos.mp3"]
 }

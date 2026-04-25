@@ -1,4 +1,8 @@
 {
     "title": "I Love You",
-    "description": "Love is in the air"
+    "description": "Love is in the air",
+    "songList": ["Chicago - Freedom Trail Studio.mp3", 
+    "Estela - Jovenes Viejos (1).mp3",
+"Headlands - National Sweetheart.mp3",
+"Point - Counterpoint - John Patitucci.mp3"]
 }

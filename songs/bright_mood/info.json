@@ -1,4 +1,7 @@
 {
     "title": "Bright Songs",
-    "description": "Bright Songs for you"
+    "description": "Bright Songs for you",
+    "songList": ["A Brand New Day - Everet Almond.mp3",
+     "Running It Down - Everet Almond.mp3",
+     "Some College - National Sweetheart.mp3"]
 }

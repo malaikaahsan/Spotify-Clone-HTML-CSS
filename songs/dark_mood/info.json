@@ -2,5 +2,9 @@
 
 {
     "title": "Dark Horse",
-    "description": "Dark Songs for you"
+    "description": "Dark Songs for you",
+     "songList": ["368 - Dyalla.mp3",
+     "Little Samba - Quincas Moreira (1).mp3",
+     "Little Samba - Quincas Moreira.mp3",
+    "Organic Guitar House - Dyalla.mp3"]
 }

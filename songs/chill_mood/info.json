@@ -1,4 +1,9 @@
 {
     "title": "Just Chill",
-    "description": "Yes, Just Chill"
+    "description": "Yes, Just Chill",
+    "songList": ["Calm Cam - TrackTribe.mp3",
+     "Dreams Of River Ganga - Hanu Dixit.mp3",
+     "Lift Up - Mini Vandals.mp3",
+     "Thumri - Sandeep Das, Anisha Roy, Bivakar Chaudhuri.mp3"
+    ]
 }

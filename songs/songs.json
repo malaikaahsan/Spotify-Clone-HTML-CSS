@@ -1,7 +1,15 @@
 {
     "folders": [
-        "angry_songs", "bright_mood", "chill_mood", "cs", 
-        "dark_mood", "diljit", "funky_mood", "karan_ajula", 
-        "love_mood", "ncs", "uplifting_mood"
+        "angry_songs", 
+        "bright_mood", 
+        "chill_mood", 
+        "cs", 
+        "dark_mood", 
+        "diljit", 
+        "funky_mood", 
+        "karan_ajula", 
+        "love_mood", 
+        "ncs", 
+        "uplifting_mood"
     ]
 }

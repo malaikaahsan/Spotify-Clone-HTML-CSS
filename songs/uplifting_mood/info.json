@@ -1,4 +1,7 @@
 {
     "title": "Get up",
-    "description": "You can do it!"
+    "description": "You can do it!",
+    "songList": ["El Billete - Edgar Lopez and Quincas Moreira.mp3", 
+                    "Guess I'll Never Know - TrackTribe.mp3",
+                    "Is This Really Happening_ - TrackTribe.mp3"]
 }
