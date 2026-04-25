@@ -65,42 +65,38 @@ const playmusic = (track, pause = false) => {
 }
 
 async function displayalbums() {
-    console.log("displaying albums")
-    let a = await fetch(`/songs/`)
-    let response = await a.text();
-    let div = document.createElement("div")
-    div.innerHTML = response;
-    let anchors = div.getElementsByTagName("a")
-    let cardcontainer = document.querySelector(".cardcontainer")
-    let array = Array.from(anchors)
-    for (let index = 0; index < array.length; index++) {
-        const e = array[index]; 
-        if (e.href.includes("/songs") && !e.href.includes(".htaccess")) {
-            let folder = e.href.split("/").slice(-2)[0]
-            let a = await fetch(`/songs/${folder}/info.json`)
-            let response = await a.json();
-            cardcontainer.innerHTML = cardcontainer.innerHTML + `<div class="card" data-folder="${folder}">
-                        <div class="play">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="black"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" stroke-width="1.5"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <img src="/songs/${folder}/cover.jpg" alt="">
-                         <h2>${response.title}</h2>
-                        <p>${response.description}</p>
-                    </div>`
+    let a = await fetch("/songs/songs.json");
+    let response = await a.json();
+    let folders = response.folders;
+    let cardcontainer = document.querySelector(".cardcontainer");
+    cardcontainer.innerHTML = ""; 
+
+    for (const folder of folders) {
+        try {
+            let infoFetch = await fetch(`/songs/${folder}/info.json`);
+            let info = await infoFetch.json();
+            
+            cardcontainer.innerHTML += `<div class="card" data-folder="${folder}">
+                <div class="play">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <img src="/songs/${folder}/cover.jpg" alt="${info.title}">
+                <h2>${info.title}</h2>
+                <p>${info.description}</p>
+            </div>`;
+        } catch (error) {
+            console.error(`Error loading metadata for ${folder}:`, error);
         }
     }
+
     Array.from(document.getElementsByClassName("card")).forEach(e => {
         e.addEventListener("click", async item => {
-            console.log("Fetching Songs")
-            songs = await getsongs(`songs/${item.currentTarget.dataset.folder}`)
-            playmusic(songs[0])
-            
-        })
-    })
+            songs = await getsongs(`songs/${item.currentTarget.dataset.folder}`);
+            playmusic(songs[0]);
+        });
+    });
 }
     
 async function main() {
